@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.util.Date;
 
 @Data
 @NoArgsConstructor
@@ -25,5 +25,5 @@ public class Users {
     private String password;
 
     @Temporal(value = TemporalType.DATE)
-    private LocalDate birthDate;
+    private Date birthDate;
 }
