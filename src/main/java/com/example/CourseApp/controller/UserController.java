@@ -21,7 +21,7 @@ public class UserController {
     private final UserServiceImpl usersGeneralService;
 
     @PostConstruct
-    public void init() throws ParseException {
+    public void init1() throws ParseException {
         Long id = 1L;
 
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
