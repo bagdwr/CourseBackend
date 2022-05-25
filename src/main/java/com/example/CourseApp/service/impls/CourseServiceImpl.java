@@ -29,7 +29,7 @@ public class CourseServiceImpl implements GeneralService {
     }
 
     @Override
-    public void merge(Object object) {
+    public void save(Object object) {
         courseRepository.save((Course) object);
     }
 

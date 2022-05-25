@@ -26,4 +26,6 @@ public class Users {
 
     @Temporal(value = TemporalType.DATE)
     private Date birthday;
+
+
 }

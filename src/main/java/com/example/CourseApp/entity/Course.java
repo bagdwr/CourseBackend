@@ -28,4 +28,6 @@ public class Course {
     private String description;
 
     private String author;
+
+    private String imgUrl;
 }

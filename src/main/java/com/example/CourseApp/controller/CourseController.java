@@ -8,19 +8,19 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/course")
+@RequestMapping("/course")
 @RequiredArgsConstructor
 public class CourseController {
 
 
     private final CourseServiceImpl courseGeneralService;
 
-    @GetMapping("/")
+    @GetMapping("/allCourses")
     public List<Course> allCourses(){
         return courseGeneralService.getAll();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/courseById{id}")
     public Course getCourseById(
             @PathVariable Long id
     ){
@@ -28,15 +28,15 @@ public class CourseController {
     }
 
 
-    @PostMapping("/")
+    @PostMapping("/addCourse")
     public void addCourse(
             @RequestBody Course course
     ){
 
-        courseGeneralService.merge(course);
+        courseGeneralService.save(course);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/deleteCourse{id}")
     public void deleteCourse(
             @PathVariable Long id
     ){
