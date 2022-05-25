@@ -25,5 +25,5 @@ public class Users {
     private String password;
 
     @Temporal(value = TemporalType.DATE)
-    private Date birthDate;
+    private Date birthday;
 }

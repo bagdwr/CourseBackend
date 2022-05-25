@@ -38,4 +38,8 @@ public class UserServiceImpl implements GeneralService {
     public void deleteById(Long id) {
         userRepository.deleteById(id);
     }
+
+    public Users getUserByEmail(String email) {
+        return userRepository.findUsersByEmail(email);
+    }
 }

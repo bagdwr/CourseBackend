@@ -27,6 +27,18 @@ public class UserController {
         return usersGeneralService.getById(id);
     }
 
+    @PostMapping(value = "/checkLoginAndPassword")
+    public Users check(
+            @RequestParam("email") String email,
+            @RequestParam("password") String password
+    ) {
+        Users user = usersGeneralService.getUserByEmail(email);
+        if(user!=null && user.getPassword().equals(password)){
+            return user;
+        }
+
+        return null;
+    }
 
     @PostMapping("/")
     public void addUser(
