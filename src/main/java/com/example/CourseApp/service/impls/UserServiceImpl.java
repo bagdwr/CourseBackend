@@ -30,7 +30,7 @@ public class UserServiceImpl implements GeneralService {
     }
 
     @Override
-    public void merge(Object object) {
+    public void save(Object object) {
         userRepository.save((Users) object);
     }
 

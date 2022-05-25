@@ -8,7 +8,7 @@ public interface GeneralService<T> {
 
     T getById(Long id);
 
-    void merge(T object);
+    void save(T object);
 
     void deleteById(Long id);
 }
